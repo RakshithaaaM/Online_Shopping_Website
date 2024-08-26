@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Page - Clothing Website</title>
+    <style>
+        body {
+            background-color: beige;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #ff9900;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #e68a00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Place Your Order</h1>
+        <form action="submit_order.php" method="post">
+            <label for="item">Select Item:</label>
+            <select name="item" id="item">
+                <option value="shirt">satin shirt</option>
+ 
+            </select>
+            
+            <label for="size">Select Size:</label>
+            <select name="size" id="size">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
+            
+            <label for="quantity">Quantity:</label>
+            <input type="number" name="quantity" id="quantity" min="1" value="1">
+            
+            <label for="shipping">Shipping Method:</label>
+            <input type="radio" name="shipping" value="standard">Standard
+            <input type="radio" name="shipping" value="express">Express
+            
+            <label for="payment">Payment Method:</label>
+            <input type="radio" name="payment" value="credit">Credit Card
+            <input type="radio" name="payment" value="paypal">PayPal
+            
+            <label for="comments">Additional Comments:</label>
+            <textarea name="comments" id="comments" rows="4" cols="50"></textarea>
+            
+            <input type="submit" value="Place Order">
+        </form>
+    </div>
+</body>
+</html>
